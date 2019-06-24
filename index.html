@@ -1,81 +1,14 @@
 
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="author" content="mre91">
-  <meta name="description" content="Rock, Paper, Scissors">
-</head>
-
-<body>
-  <script>
-      function computerPlay() {
-        let random = Math.floor(Math.random() * 3) + 1;
-        if (random == 1) {
-          return "rock";
-        } else if (random == 2) {
-          return "paper";
-        } else if (random == 3) {
-          return "scissors";
-        }
-      }
-
-      function playRound(playerSelection, computerSelection) {
-        playerSelection = playerSelection.toLowerCase();
-        if (playerSelection == "rock") {
-          if (computerSelection == "rock") {
-            return "Draw";
-          } else if (computerSelection == "paper") {
-            return "You Lose! Paper beats Rock.";
-          } else {
-            return "You Win! Rock beats Scissors.";
-          }
-        } else if (playerSelection == "paper") {
-          if (computerSelection == "rock") {
-            return "You Win! Paper beats Rock.";
-          } else if (computerSelection == "paper") {
-            return "Draw";
-          } else {
-            return "You Lose! Scissors beats Paper.";
-          }
-        } else if (playerSelection == "scissors") {
-          if (computerSelection == "rock") {
-            return "You Lose! Rock beats Scissors.";
-          } else if (computerSelection == "paper") {
-            return "You Win! Scissors beats Paper.";
-          } else {
-            return "Draw";
-          }
-        } else {
-          return "Input not recognized. Please enter: 'rock', 'paper', or 'scissors'";
-        }
-      }
-
-      function game() {
-        let losses = 0;
-        let wins = 0;
-        for (let i = 0; i < 5; i++) {
-          let playerSelection = prompt("Please choose 'rock', 'paper', or 'scissors'.");
-          let computerSelection = computerPlay();
-          let result = playRound(playerSelection, computerSelection);
-          alert(result);
-          if (result.slice(0, 7) == "You Win") {
-            ++wins;
-          } else if (result.slice(0, 8) == "You Lose") {
-            ++losses;
-          }
-        }
-        if (wins > losses) {
-          return "You win the game! Wins: " + wins + " Losses: " + losses;
-        } else if (wins < losses){
-          return "You lost the game. Wins: " + wins + " Losses: " + losses;
-        } else {
-          return "The game results in a draw. Wins: " + wins + " Losses: " + losses;
-        }
-      }
-  </script>
-</body>
-
+  <head>
+    <meta charset="utf-8">
+    <title>Rock, Paper, Scissors</title>
+    <meta name="author" content="mre91">
+    <meta name="description" content="Rock, Paper, Scissors">
+  </head>
+  <body>
+    <div id="container"></div> 
+    <script src="script.js"></script>
+  </body>
 </html>
