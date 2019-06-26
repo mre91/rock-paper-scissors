@@ -1,0 +1,79 @@
+body {
+    background: #222222;
+    color: white;
+}
+
+#container {
+    border: medium solid goldenrod;
+    border-radius: 25px;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    width: 500px;
+}
+
+#header {
+    background: goldenrod;
+    border-radius: 15px 15px 0px 0px;
+    color: #222222;
+    display: block;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    text-align: center;
+}
+
+#mainBlock {
+    background: #333333;
+    border-radius: 0px 0px 20px 20px;
+    color: white;
+    padding: 25px 25px;
+}
+
+#resetButton {
+    background: crimson;
+    border-color: #222222;
+    border-radius: 25px;
+    color: black;
+    height: 25px;
+    width: 75px;
+}
+
+#rock {
+    background: white;
+    border-color: #222222;
+    border-radius: 25px;
+    color: black;
+    height: 25px;
+    margin-right: 10px;
+    width: 75px;
+}
+
+#paper {
+    background: white;
+    border-color: #222222;
+    border-radius: 25px;
+    color: black;
+    height: 25px;
+    margin-right: 10px;
+    width: 75px;
+}
+
+#scissors {
+    background: white;
+    border-color: #222222;
+    border-radius: 25px;
+    color: black;
+    height: 25px;
+    margin-right: 10px;
+    width: 75px;
+}
+
+#score {
+    color: crimson;
+    font-weight: bold;
+}
