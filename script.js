@@ -4,25 +4,30 @@ let scissors = document.getElementById('scissors');
 let wins = 0;
 let losses = 0;
 
+const header = document.createElement('h1');
+header.setAttribute('id', 'header');
+header.textContent = 'Rock, Paper, Scissors';
+container.appendChild(header);
+
+const mainBlock = document.createElement('div');
+mainBlock.setAttribute('id', 'mainBlock');
+container.appendChild(mainBlock);
+
 const score = document.createElement('div');
 score.setAttribute('id', 'score');
 score.textContent = 'Score: ' + wins + ' - ' + losses;
-container.appendChild(score);
+mainBlock.appendChild(score);
 
 const message = document.createElement('p');
 message.setAttribute('id', 'message');
 message.textContent = 'Welcome! ' +
-    'To begin, select "Rock", "Paper" or "Scissors" from the buttons below. ' +
+    'To begin, select Rock, Paper, or Scissors from the buttons below. ' +
     'First to 5 wins the game.';
-container.appendChild(message);
+    mainBlock.appendChild(message);
 
 const buttons = document.createElement('div');
 buttons.setAttribute('id', 'buttons');
-container.appendChild(buttons);
-
-const reset = document.createElement('div');
-buttons.setAttribute('id', 'reset');
-container.appendChild(reset);
+mainBlock.appendChild(buttons);
 
 let rockButton = document.createElement("BUTTON");
 rockButton.setAttribute('id', 'rock');
@@ -119,7 +124,7 @@ function resetGame() {
     wins = 0;
     score.textContent = 'Score: ' + wins + ' - ' + losses;
     message.textContent = 'Welcome! ' +
-    'To begin, select "Rock", "Paper" or "Scissors" from the buttons below. ' +
+    'To begin, select Rock, Paper, or Scissors from the buttons below. ' +
     'First to 5 wins the game.';
 }
 
